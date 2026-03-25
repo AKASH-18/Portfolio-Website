@@ -12,9 +12,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Akash Singh Bisht | Full Stack Developer",
+  title: "Akash Singh Bisht | MERN Stack Developer",
   description:
-    "Portfolio of Akash Singh Bisht, a MERN stack full stack developer building responsive web apps, REST APIs and production-ready projects.",
+    "Portfolio of Akash Singh Bisht, a MERN stack developer building responsive React apps, REST APIs, full-stack projects, and production-ready web applications.",
 };
 
 export default function RootLayout({ children }) {

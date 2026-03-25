@@ -1,6 +1,5 @@
 import {
   ArrowUpRight,
-  Braces,
   Code2,
   Database,
   ExternalLink,
@@ -10,7 +9,6 @@ import {
   Phone,
   Sparkles,
   Terminal,
-  X,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -18,15 +16,13 @@ const profile = {
   name: "Akash Singh Bisht",
   shortName: "Akash Bisht",
   initials: "AB",
-  role: "Full Stack Developer",
+  role: "MERN Stack Developer",
   email: "akashakashbisht@gmail.com",
   phone: "+91 9012311495",
   github: "https://github.com/AKASH-18",
   linkedin: "http://www.linkedin.com/in/akash-bisht-69385418a",
-  instagram: "https://www.instagram.com/",
-  x: "https://x.com/",
   portfolio: "https://akashbisht18.netlify.app/",
-  cv: "https://akashbisht18.netlify.app/Akash_Bisht_CV.pdf",
+  cv: "https://drive.google.com/file/d/1UVhsvOKMLDmHLRYQAisFnxlvxD6C8E3V/view?usp=sharing",
 };
 
 const skills = [
@@ -52,13 +48,19 @@ const skills = [
   "Netlify",
 ];
 
-const skillGroups = [
-  ["Frontend", "React.js, Next.js, Redux Toolkit, Tailwind CSS, Bootstrap, TypeScript"],
-  ["Backend", "Node.js, Express.js, REST APIs"],
-  ["Database", "MongoDB, Firebase"],
-  ["Tools", "Git, GitHub, VS Code, Figma, Vercel, Render, Netlify"],
-  ["Testing", "Jest, React Testing Library"],
-  ["Strengths", "Responsive design, API integration, debugging, UI/UX optimization, cross-browser compatibility"],
+const techStack = [
+  { name: "MongoDB", group: "Database", icon: "https://cdn.simpleicons.org/mongodb/47A248", accent: "#47A248" },
+  { name: "Express", group: "Backend", icon: "https://cdn.simpleicons.org/express/FFFFFF", accent: "#f8fafc" },
+  { name: "React", group: "Frontend", icon: "https://cdn.simpleicons.org/react/61DAFB", accent: "#61DAFB" },
+  { name: "Node.js", group: "Backend", icon: "https://cdn.simpleicons.org/nodedotjs/5FA04E", accent: "#5FA04E" },
+  { name: "Next.js", group: "Framework", icon: "https://cdn.simpleicons.org/nextdotjs/FFFFFF", accent: "#f8fafc" },
+  { name: "JavaScript", group: "Language", icon: "https://cdn.simpleicons.org/javascript/F7DF1E", accent: "#F7DF1E" },
+  { name: "TypeScript", group: "Language", icon: "https://cdn.simpleicons.org/typescript/3178C6", accent: "#3178C6" },
+  { name: "Redux", group: "State", icon: "https://cdn.simpleicons.org/redux/764ABC", accent: "#764ABC" },
+  { name: "Tailwind", group: "Styling", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4", accent: "#06B6D4" },
+  { name: "Firebase", group: "Auth", icon: "https://cdn.simpleicons.org/firebase/FFCA28", accent: "#FFCA28" },
+  { name: "Git", group: "Versioning", icon: "https://cdn.simpleicons.org/git/F05032", accent: "#F05032" },
+  { name: "Vercel", group: "Deploy", icon: "https://cdn.simpleicons.org/vercel/FFFFFF", accent: "#f8fafc" },
 ];
 
 const projects = [
@@ -66,53 +68,57 @@ const projects = [
     title: "CRM Project",
     type: "Full-stack CRM system",
     description:
-      "Customer relationship management platform with admin and employee roles, lead lifecycle tracking, follow-ups, closure flow, and performance dashboard.",
+      "Built a role-based CRM system with admin and employee access, lead tracking, follow-up management, closure workflow and dashboard views to manage customer pipelines end to end.",
     stack: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs"],
+    demo: "https://crm-project-brown-theta.vercel.app",
+    source: "https://github.com/AKASH-18/Crm-project",
     icon: Layers3,
   },
   {
     title: "Zerodha Clone",
     type: "Full-stack trading platform",
     description:
-      "Trading-style application for portfolios, orders and positions with secure backend APIs, CRUD operations, reusable React components and modular architecture.",
+      "Built a full-stack trading-style platform with portfolio, order and position management, secure backend APIs, CRUD operations and reusable React components.",
     stack: ["MongoDB", "Express.js", "React.js", "Node.js", "JavaScript"],
+    source: "https://github.com/AKASH-18/Zerodha_Clone",
     icon: Database,
   },
   {
     title: "Movie SuggesAI App",
     type: "AI movie recommendation app",
     description:
-      "Responsive SPA with authentication, TMDB movie data, Gemini-powered recommendations, custom hooks and multilingual support.",
+      "Built a responsive movie app with Firebase authentication, TMDB movie data, Gemini-powered recommendations, custom hooks and multilingual support.",
     stack: ["React.js", "Redux Toolkit", "Firebase", "Tailwind CSS"],
     demo: "https://netflix-gen-ai.vercel.app/",
-    source: "https://netflix-gen-ai.vercel.app/",
+    source: "https://github.com/AKASH-18/NetflixGenAI",
     icon: Sparkles,
   },
   {
-    title: "CodeViewer",
-    type: "Code snippet UI",
-    description: "A friendly interface to view and share code snippets with a clean HTML, CSS and JavaScript build.",
-    stack: ["HTML5", "JavaScript ES6+", "CSS"],
-    demo: "https://akash-18.github.io/codeviewer/",
-    source: "https://github.com/AKASH-18/codeviewer",
+    title: "Pocket Notes",
+    type: "Note-taking app",
+    description:
+      "Built a responsive note-taking app for creating note groups, saving notes by category, and managing quick thoughts, reminders and study notes.",
+    stack: ["React.js", "JavaScript", "CSS", "HTML", "Vercel"],
+    demo: "https://pocket-notes-8g7r.vercel.app/",
+    source: "https://github.com/AKASH-18/POCKET_NOTES",
     icon: Code2,
   },
   {
     title: "GitHub Profile Finder",
     type: "API project",
-    description: "Search GitHub profiles and view key account details through a responsive JavaScript interface.",
+    description: "Built a GitHub profile search app using API integration to display profile details through a responsive JavaScript interface.",
     stack: ["API", "JavaScript ES6+", "HTML", "CSS"],
-    demo: "https://git-proffinder.netlify.app/",
+    demo: "https://akash-18.github.io/Github-Profile-Finder/",
     source: "https://github.com/AKASH-18/Github-Profile-Finder",
     icon: GitBranch,
   },
   {
     title: "Rock Paper Scissors",
     type: "Browser game",
-    description: "A simple game against the computer with interactive visuals and score-focused gameplay.",
+    description: "Built a browser game against the computer with interactive controls, score tracking and a responsive JavaScript UI.",
     stack: ["Game", "JavaScript ES6+", "HTML", "CSS"],
     demo: "https://rock-paper-scissor-zeta-indol.vercel.app/",
-    source: "https://github.com/AKASH-18/Rock-Paper-Scissor",
+    source: "https://github.com/AKASH-18/Rock_Paper_Scissor-",
     icon: Terminal,
   },
 ];
@@ -168,16 +174,6 @@ function LinkedinIcon({ size = 18 }) {
   );
 }
 
-function InstagramIcon({ size = 18 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
 export default function Home() {
   const marqueeSkills = [...skills, ...skills];
 
@@ -210,15 +206,15 @@ export default function Home() {
           <div className="reveal">
             <div className="hero-pill">
               <Sparkles size={16} />
-              MERN Stack | React.js | Node.js | MongoDB
+              React.js | Node.js | MongoDB | Next.js
             </div>
             <h1 className="hero-title">
-              Full stack developer building clean, scalable web apps.
+              MERN Stack Developer
             </h1>
             <p className="hero-copy">
-              I am {profile.name}, a B.Tech CSE graduate and MERN stack developer with hands-on self-project experience building responsive interfaces, REST APIs, authentication flows and production-ready deployments.
+              I am {profile.name}, a B.Tech CSE graduate focused on responsive React interfaces, REST APIs, MongoDB-backed features and production-ready deployments.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Button href="#work" primary>
                 See My Work
               </Button>
@@ -232,7 +228,7 @@ export default function Home() {
 
           <div className="profile-card reveal reveal-delay">
             <div className="profile-card-bg" />
-            <div className="relative flex h-full min-h-[500px] flex-col justify-between p-6 sm:p-7">
+            <div className="relative flex h-full min-h-[420px] flex-col justify-between p-6 sm:min-h-[460px] sm:p-7">
               <div className="flex items-center justify-between">
                 <div className="icon-shell">
                   <Code2 size={28} />
@@ -247,7 +243,7 @@ export default function Home() {
                 <div
                   className="mx-auto"
                   style={{
-                    width: "min(100%, 360px)",
+                    width: "min(100%, 320px)",
                     aspectRatio: "4 / 5",
                     padding: 10,
                     borderRadius: 24,
@@ -288,12 +284,6 @@ export default function Home() {
                     <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
                       <GithubIcon />
                     </a>
-                    <a href={profile.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">
-                      <InstagramIcon />
-                    </a>
-                    <a href={profile.x} target="_blank" rel="noreferrer" aria-label="X">
-                      <X size={18} />
-                    </a>
                     <a href={`tel:${profile.phone.replace(/\s/g, "")}`} aria-label="Phone">
                       <Phone size={18} />
                     </a>
@@ -331,7 +321,6 @@ export default function Home() {
         <SectionHeading
           eyebrow="Selected work"
           title="Projects with real full-stack practice."
-          copy="The resume highlights MERN projects, deployed apps, REST APIs, authentication, dashboards, API integrations and responsive UI work."
         />
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project, index) => {
@@ -367,25 +356,28 @@ export default function Home() {
       </section>
 
       <section id="skills" className="skills-section">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr]">
-          <SectionHeading
-            eyebrow="Toolkit"
-            title="MERN stack skills with frontend polish."
-            copy="Frontend, backend, database, deployment, testing and debugging skills from the resume, grouped so recruiters can scan fast."
-            dark
-          />
-          <div className="grid gap-3 sm:grid-cols-2">
-            {skillGroups.map(([title, copy], index) => (
-              <div key={title} className="skill-card reveal" style={{ "--delay": `${index * 45}ms` }}>
-                <div className="flex items-start justify-between gap-5">
+        <div className="mx-auto max-w-6xl">
+          <div className="skills-panel reveal">
+            <div className="skills-title">
+              <p className="section-kicker">Tech Stack</p>
+              <h2>MERN + modern web tools.</h2>
+            </div>
+
+            <div className="tech-grid" aria-label="Developer skills and tools">
+              {techStack.map((tech, index) => (
+                <article
+                  key={tech.name}
+                  className="tech-tile reveal"
+                  style={{ "--accent": tech.accent, "--delay": `${index * 35}ms` }}
+                >
+                  <div className="tech-icon" aria-hidden="true" style={{ "--icon": `url(${tech.icon})` }} />
                   <div>
-                    <h3 className="font-black">{title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-zinc-600">{copy}</p>
+                    <h3>{tech.name}</h3>
+                    <span>{tech.group}</span>
                   </div>
-                  <Braces size={18} className="mt-1 shrink-0 text-zinc-500" />
-                </div>
-              </div>
-            ))}
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -394,7 +386,6 @@ export default function Home() {
         <SectionHeading
           eyebrow="Experience & Education"
           title="Self-project experience backed by CSE fundamentals."
-          copy="The story is straightforward: full-stack self projects since 2023, B.Tech CSE in 2022, and training exposure across web development, Python, networking and cyber security."
         />
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {journey.map(([year, title, text], index) => (
@@ -411,9 +402,9 @@ export default function Home() {
         <div className="contact-panel reveal">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
-              <p className="section-kicker">Immediate joiner</p>
+              <p className="section-kicker">Open to opportunities</p>
               <h2 className="max-w-3xl text-4xl font-black leading-tight sm:text-6xl">
-                Looking for a MERN developer who can build and debug end to end?
+                Looking for a MERN developer who can build responsive, production-ready web apps?
               </h2>
               <div className="mt-6 grid gap-3 text-base text-zinc-300 sm:grid-cols-2">
                 <a className="contact-row" href={`mailto:${profile.email}`}>
